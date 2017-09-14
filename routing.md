@@ -47,7 +47,7 @@ When link is selected, apply 'active' style to it.
 ```
 
 ## Children Routes
-
+Add children
 ```
 import { AUTH_ROUTES } from "./auth/auth.routes";
 
@@ -58,3 +58,5 @@ const APP_ROUTES: Routes = [
 ];
 
 ```
+Add router-outlet to create nested routing.
+  
