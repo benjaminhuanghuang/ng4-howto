@@ -1,0 +1,24 @@
+Template
+```
+  <div class="col-md-8 col-md-offset-2">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div class="form-group">
+              <label for="content">Content</label>
+              <input type="text" id="content" class="form-control"
+                      ngMode name="content" required>
+          </div>
+          <button class="btn btn-primary" type="submit">Save</button>
+      </form>
+  </div>
+```
+
+Class
+```
+  import { NgForm } from "@angular/forms";
+
+  onSubmit(form: NgForm) {
+    const message = new Message(form.value.content, 'Max');
+    this.messageService.addMessage(message);
+    form.resetForm();
+  }
+```
